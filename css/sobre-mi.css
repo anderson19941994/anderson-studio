@@ -1,0 +1,146 @@
+/* ESTILOS ESPECÍFICOS SOBRE MÍ */
+
+.about-section {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Imagen y Frame */
+.about-image {
+    position: relative;
+    justify-self: center;
+}
+
+.profile-frame {
+    width: 320px;
+    height: 400px;
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--gradient);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);
+}
+
+.experience-badge span {
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: block;
+}
+
+.experience-badge p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Texto */
+.about-text h1 {
+    font-size: 3.2rem;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.about-text p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Skills */
+.skills-container {
+    margin: 40px 0;
+}
+
+.skills-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-item {
+    background: rgba(255,255,255,0.03);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    border-color: var(--primary);
+    background: rgba(0, 122, 255, 0.05);
+}
+
+.skill-item i {
+    color: var(--primary);
+}
+
+/* ESTILO ESPECIAL PARA EL ICONO DE GEMINI (Varita Mágica) */
+.fa-wand-magic-sparkles {
+    background: linear-gradient(135deg, #4285f4, #9b72cb, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .profile-frame {
+        width: 280px;
+        height: 350px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
